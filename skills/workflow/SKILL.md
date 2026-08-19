@@ -336,7 +336,6 @@ validate:
     pattern: experimental_createWorkflow
     message: 'experimental_createWorkflow is now stable — use createWorkflow from @vercel/workflow. Run npx @ai-sdk/codemod v6 for automated migration.'
     severity: error
-    upgradeToSkill: workflow
     upgradeWhy: 'Guides migration from experimental_createWorkflow to the stable createWorkflow API and then to the "use workflow" directive.'
   -
     pattern: from\s+['"]@vercel/workflow['"]
@@ -351,7 +350,6 @@ validate:
     pattern: context\.run\s*\(
     message: 'context.run() is not a Workflow SDK pattern — use "use step" directive for retryable, observable steps'
     severity: error
-    upgradeToSkill: workflow
     upgradeWhy: 'Guides migration from context.run() to the "use step" directive for durable, retryable workflow steps.'
   -
     pattern: \brequire\s*\(
@@ -367,7 +365,6 @@ validate:
     pattern: createWorkflow\s*\(
     message: 'createWorkflow() is the legacy API — use the "use workflow" directive on an async function instead'
     severity: error
-    upgradeToSkill: workflow
     upgradeWhy: 'Guides migration from createWorkflow() function API to the "use workflow" directive pattern.'
     skipIfFileContains: experimental_createWorkflow
   -

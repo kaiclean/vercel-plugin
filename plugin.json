@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vercel-plugin",
+  "version": "0.48.0",
+  "description": "Vercel ecosystem plugin — 33 skills covering Vercel products, AI SDK, Next.js, deployments, storage, auth, and more.",
+  "homepage": "https://github.com/vercel/vercel-plugin",
+  "repository": "https://github.com/vercel/vercel-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["vercel", "nextjs", "ai-sdk", "deployment", "frontend"]
+}

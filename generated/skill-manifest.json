@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T03:07:25.143Z",
+  "generatedAt": "2026-08-19T12:07:47.139Z",
   "version": 2,
   "skills": {
     "access-protected-vercel-deployment": {
@@ -4761,9 +4761,7 @@
           "pattern": "experimental_createWorkflow",
           "message": "experimental_createWorkflow is now stable — use createWorkflow from @vercel/workflow. Run npx @ai-sdk/codemod v6 for automated migration.",
           "severity": "error",
-          "upgradeToSkill": "workflow",
-          "upgradeWhy": "Guides migration from experimental_createWorkflow to the stable createWorkflow API and then to the \"use workflow\" directive.",
-          "upgradeMode": "soft"
+          "upgradeWhy": "Guides migration from experimental_createWorkflow to the stable createWorkflow API and then to the \"use workflow\" directive."
         },
         {
           "pattern": "from\\s+['\"]@vercel/workflow['\"]",
@@ -4780,9 +4778,7 @@
           "pattern": "context\\.run\\s*\\(",
           "message": "context.run() is not a Workflow SDK pattern — use \"use step\" directive for retryable, observable steps",
           "severity": "error",
-          "upgradeToSkill": "workflow",
-          "upgradeWhy": "Guides migration from context.run() to the \"use step\" directive for durable, retryable workflow steps.",
-          "upgradeMode": "soft"
+          "upgradeWhy": "Guides migration from context.run() to the \"use step\" directive for durable, retryable workflow steps."
         },
         {
           "pattern": "\\brequire\\s*\\(",
@@ -4801,9 +4797,7 @@
           "message": "createWorkflow() is the legacy API — use the \"use workflow\" directive on an async function instead",
           "severity": "error",
           "skipIfFileContains": "experimental_createWorkflow",
-          "upgradeToSkill": "workflow",
-          "upgradeWhy": "Guides migration from createWorkflow() function API to the \"use workflow\" directive pattern.",
-          "upgradeMode": "soft"
+          "upgradeWhy": "Guides migration from createWorkflow() function API to the \"use workflow\" directive pattern."
         },
         {
           "pattern": "streamObject\\s*\\(",
@@ -4856,12 +4850,6 @@
           "targetSkill": "vercel-functions",
           "message": "Timer-based delay in workflow code — use sleep() from \"workflow\" instead of setTimeout/setInterval. Loading Vercel Functions guidance.",
           "skipIfFileContains": "from\\s+[''\"]workflow[''\"].*sleep|sleep\\s*\\("
-        },
-        {
-          "pattern": "experimental_createWorkflow",
-          "targetSkill": "workflow",
-          "message": "Guides migration from experimental_createWorkflow to the stable createWorkflow API and then to the \"use workflow\" directive.",
-          "synthesized": true
         }
       ],
       "promptSignals": {
